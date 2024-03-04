@@ -1,0 +1,6 @@
+services:
+  client:
+    build:
+      dockerfile: ./Dockerfile
+    command: bash
+    working_dir: /kafka/bin
