@@ -20,3 +20,7 @@ topic-describe:
 	docker compose -f operations.yaml run --rm client bash -c \
 		"./kafka-topics.sh --describe --bootstrap-server $(bootstrap-server) --topic $$topic"
 
+topic-list:
+	docker compose -f operations.yaml run --rm client bash -c \
+		"./kafka-topics.sh --list --bootstrap-server $(bootstrap-server)"
+
