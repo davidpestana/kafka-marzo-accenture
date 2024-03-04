@@ -7,3 +7,10 @@ services:
     volumes:
       - ./data:/data
       - ./config:/config
+
+  node:
+    image: node
+    command: bash
+    working_dir: /app
+    volumes:
+      - ./src:/app
