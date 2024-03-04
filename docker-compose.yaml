@@ -12,6 +12,8 @@ services:
     depends_on:
       - zookeeper
     command: ./bin/kafka-server-start.sh /config/broker1.properties
+    ports:
+      - 29092:29092
     volumes:
       - ./config:/config
       - ./data/broker1:/kafka-logs
@@ -25,6 +27,8 @@ services:
     volumes:
       - ./config:/config
       - ./data/broker2:/kafka-logs
+    ports:
+      - 29093:29093
 
   broker3:
     build:
@@ -35,4 +39,6 @@ services:
     volumes:
       - ./config:/config
       - ./data/broker3:/kafka-logs
+    ports:
+      - 29094:29094
 
