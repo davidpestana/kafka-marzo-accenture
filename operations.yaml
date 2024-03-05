@@ -14,3 +14,10 @@ services:
     working_dir: /app
     volumes:
       - ./src:/app
+
+  java11:
+    build:
+      context: ./src/java-producer
+    command: bash
+    
+    

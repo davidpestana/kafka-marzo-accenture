@@ -11,6 +11,9 @@ client:
 node:
 	docker compose -f operations.yaml run --rm node
 
+java11:
+	docker compose -f operations.yaml run --rm 
+
 topic-create:	
 	@read -p "Enter a topic name: " topic; \
 	read -p "Enter partition number: " partitions; \
