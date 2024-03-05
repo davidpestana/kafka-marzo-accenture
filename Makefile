@@ -14,6 +14,9 @@ node:
 java11:
 	docker compose -f operations.yaml run --rm 
 
+du:
+	docker compose -f operations.yaml run --rm client bash -c "cd /data && du -h --max-depth=1"
+
 topic-create:	
 	@read -p "Enter a topic name: " topic; \
 	read -p "Enter partition number: " partitions; \
