@@ -15,9 +15,22 @@ services:
     volumes:
       - ./src:/app
 
+  python:
+    build:
+      context: ./src/python
+    command: bash
+    working_dir: /app
+    volumes:
+      - ./src/python:/app
+
+
+
   java11:
     build:
-      context: ./src/java-producer
+      context: ./src/java
     command: bash
+    working_dir: /app
+    volumes:
+      - ./src/java:/app
     
     

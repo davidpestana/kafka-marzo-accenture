@@ -15,9 +15,10 @@ send = async () => {
     counter++;
     await producer.connect()
     await producer.send({
-    topic: '3p3r',
+    topic: 'foobar',
     messages: [
-        { value: 'Hello KafkaJS user!  ' + counter },
+        
+        {ack:0, value: 'Hello KafkaJS user!  ' + counter },
     ],
     })
 
