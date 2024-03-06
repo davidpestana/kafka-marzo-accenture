@@ -6,7 +6,7 @@ stop:
 	docker compose down --remove-orphans
 
 cleanup:
-	docker rm -f $(docker ps -aq)
+	docker rm -f $$(docker ps -aq)
 
 client:
 	docker compose -f operations.yaml run --rm client
